@@ -1,0 +1,219 @@
+What is a line plot and why use it?
+
+A line chart or line plot is a type of plot which displays information as a series of data points called 'markers' connected by straight line segments. It is a basic type of chart common in many fields. Use line plot when you have a continuous data set. These are best suited for trend-based visualizations of data over a period of time.
+
+Line plot
+
+This more suitable when we want to plot the data over the time period.
+
+A line plot is a type of plot that displays information as series of data points connected by staright lines.
+
+visualizing trends and changes over time
+showing relationships
+compare multiple data series
+highlighting sudden changes or anamolies
+
+Bar-plot :
+
+This type of plot is more useful for comparing the data such as sales of a product with respect to other products.
+
+Scatter
+
+can be used when we have continous data.detecting the outliers,
+
+investigating the trends
+
+Box-Plot:
+Represents the interquatile range as a box, a median line, and whiskers indicating the range. outliers ill be found after the whiskers.
+
+Use Case:
+Compare the distrubution of a continious variable across the different categoried or groups.
+
+Compare the distrubution of a continuous variable across the different categoris or groups
+
+examine spread and skewness of a dataset,visualising the data
+
+summary statistics
+
+compare distrubutions of multiple variables in data
+
+PLotting libraries
+matplotlib: Its is general purpose library
+1.Integrates with other libraries and frameworks such as seaborne numpy plotly
+
+Features: can create wide vairety of plots
+customizes various elements
+
+pandas: users employ it for data manipulation
+its functions are built on matplotlib.
+
+Features :Integrates seamlessly with pandas data structure,
+most suitable foe exploratory data analysis 
+
+seaborne: Great option for specialized statistical visualizations,provides stylish plots
+
+Features: offers various color palettes and styles
+offers functions to combine multiple plots in a grid.
+integrates with pandas with series.\\
+
+
+folium: used for geo spatial data maps,buikds interactive maps,integrates with pandas and numpy
+
+plotly: it is more suitable when we want to create the interactive plots, can create variety of plots
+
+Feature:
+helps you build interactive dashboards, enables you plotting in a web browser.
+
+pywaffle: visualizes the categorical data using waffle charts
+
+Features:
+Provides a unique way to represent proportions.
+
+
+
+Detailed info on matplotlib library:
+john hunter(1968-2012)
+
+3 layers: 1.Backemd layer: INTERFACE Classes
+
+Figure canvas : matplolib.backend_bases.figurecanvas
+this encompasses the are onto which figure is drawn.
+Renderer: matplolib.backend_bases.renderer
+Knows hoe to draw on the figure canvas.
+2.artist layer: main layer in the library
+knows how to use the renderer to draw on the canvas.
+Title,lines,tick labels and imahes all corresponf to individual artist instances.
+
+2 types of objects
+1. primitive line2d,rectangle,circle,text.
+2. Composite: Axis,Tick,Axes and Figure.
+
+3.Scripting layer: the layer where user interacts with the the library through the scripts
+
+matplot lib can be integrated with many frame worls and libraries
+
+!matplotlib inline - this in inline function intially for a plot whene a plot function is called and creates a plot if not exists
+import matplotlib.pyplot as plt
+
+plt.plot(5,5,'0')
+plot.show()
+
+
+
+Summary: Introduction to Data Visualization Tools
+Congratulations! You have completed this module. At this point in the course, you know: 
+
+Data visualization is the process of presenting data in a visual format, such as charts, graphs, and maps, to help people understand and analyze data easily. 
+
+Data visualization has diverse use cases, such as in business, science, healthcare, and finance. 
+
+It is important to follow best practices, such as selecting appropriate visualizations for the data being presented, choosing colors and fonts that are easy to read and interpret, and minimizing clutter.
+
+There are various types of plots commonly used in data visualization.
+
+Line plots capture trends and changes over time, allowing us to see patterns and fluctuations.
+
+Bar plots compare categories or groups, providing a visual comparison of their values.
+
+Scatter plots explore relationships between variables, helping us identify correlations or trends.
+
+Box plots display the distribution of data, showcasing the median, quartiles, and outliers.
+
+Histograms illustrate the distribution of data within specific intervals, allowing us to understand its shape and concentration.
+
+Matplotlib is a plotting library that offers a wide range of plotting capabilities.
+
+Pandas is a plotting library that provides Integrated plotting functionalities for data analysis.
+
+Seaborn is a specialized library for statistical visualizations, offering attractive default aesthetics and color palettes.
+
+Folium is a Python library that allows you to create interactive and customizable maps.
+
+Plotly is an interactive and dynamic library for data visualization that supports a wide range of plot types and interactive features.
+
+PyWaffle enables you to visualize proportional representation using squares or rectangles.
+
+Matplotlib is one of the most widely used data visualization libraries in Python. 
+
+Matplotlib was initially developed as an EEG/ECoG visualization tool. 
+
+Matplotlib’s architecture is composed of three main layers: Backend layer, Artist layer, and the Scripting layer. 
+
+The anatomy of a plot refers to the different components and elements that make up a visual representation of data.
+
+Matplotlib is a well-established data visualization library that can be integrated in different environments. 
+
+Jupyter Notebook is an open-source web application that allows you to create and share documents.
+
+Matplotlib has a number of different backends available. 
+
+You can easily include the label and title to your plot with plt.
+
+In order to start creating different types of plots of the data, you will need to import the data into a Pandas DataFrame.
+
+A line plot is a plot in the form of a series of data points connected by straight line segments. 
+
+Line plot is one of the most basic type of chart and is common in many fields. 
+
+You can generate a line plot by assigning "line" to 'Kind' parameter in the plot() function.
+
+
+Area Plot:
+also known as area chart or graph
+dispalys magnitude and proportion of multiple variables.
+represents time or another ordered dimension
+is based on lineplot
+
+uses:
+
+Tracking stock market performance
+visualizing population demographics
+dispalying the distrubution of resources
+
+Histogram:
+Represents the frquency distrubution of a data-set
+Partitions numeric data into bins
+kind = hist
+we can use numpy library for histogram representation
+
+plt.annotate('',  # s: str. will leave it blank for no text
+             xy=(32, 70),  # place head of the arrow at point (year 2012 , pop 70)
+             xytext=(28, 20),  # place base of the arrow at point (year 2008 , pop 20)
+             xycoords='data',  # will use the coordinate system of the object being annotated
+             arrowprops=dict(arrowstyle='->', connectionstyle='arc3', color='blue', lw=2)
+             )
+
+# Annotate Text
+plt.annotate('2008 - 2011 Financial Crisis',  # text to display
+             xy=(28, 30),  # start the text at at point (year 2008 , pop 30)
+             rotation=72.5,  # based on trial and error to match the arrow
+             va='bottom',  # want the text to be vertically 'bottom' aligned
+             ha='left',  # want the text to be horizontally 'left' algned.
+             )
+
+plt.show()
+
+
+Pie Charts:
+A circular staistical graphic divided into segments
+illustrate numerical proportion
+
+pie charts are less accurate than barcharts
+
+
+Box Plots: Box plot is nothing representing the statistical data through 5 dimensions 
+1. Minimum: Smallest value
+2.First Quartile: First quartile is the point 25% of the way through the sorted data, in other words, a quarter of the data points are less than this value. 
+3. Median: Median 
+4. third Quartile: First quartile is the point 75% of the way through the sorted data, in other words, a quarter of the data points are less than this value. 
+5.Maximum: Highest 
+
+Used determine the outliers
+
+
+Scatter Plot:displaying the values pretaing to twovariables
+Determine the corelation between the 2 variables
+
+
+
+
