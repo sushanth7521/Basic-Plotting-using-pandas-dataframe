@@ -1,4 +1,4 @@
-This document contains theory part of the basic plots
+#This document contains theory part of the basic plots
 
 
 What is a line plot and why use it?
